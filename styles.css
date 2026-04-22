@@ -1,4 +1,17 @@
 .titulo1{
-color: rgb(30, 7, 161);
+color: rgba(0, 255, 251, 0.794);
+text-align: center;
+background-color: rgb(19, 0, 161);
+height: 80px;
+}
+.container{
+border: 2px solid;
+padding: 10px;
+border-radius: 15px;
+background-color: rgb(19, 4, 128);
 
+}
+img{
+width: 100px;
+height: 100px;
 }
