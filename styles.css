@@ -1,17 +1,30 @@
 .titulo1{
 color: rgba(0, 255, 251, 0.794);
+align-items: center;
 text-align: center;
 background-color: rgb(19, 0, 161);
-height: 80px;
+height: 100px;
 }
 .container{
-border: 2px solid;
-padding: 10px;
+padding: 100px;
 border-radius: 15px;
 background-color: rgb(19, 4, 128);
-
 }
 img{
-width: 100px;
-height: 100px;
+width: 400px;
+height: 400px;
+}
+.fundo{
+    align-content: center;
+    background-color:rgb(19, 4, 128) ;
+}
+.bela{
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+}
+.cabeçalho{
+    align-items: center;
+    text-align: center;
+    height: 100px;
 }
