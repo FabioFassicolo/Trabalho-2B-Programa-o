@@ -19,11 +19,35 @@ height: 400px;
     background-color:rgb(19, 4, 128) ;
 }
 .bela{
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
     border-radius: 50px;
+    display: block;
+    margin-left: 10px;
+     margin-right: auto;
+
+}
+.rei_leao{
+    height: 400px;
+    width: 400px;
+    border-radius: 50px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    transition: tranform 0.5s ease ;
+    box-shadow: 0 8px 25px rgb(rgb(255, 255, 255), rgb(239, 255, 12), rgb(241, 53, 20)) (0, 0, 0, 0.6);
+}
+.aladdin{ 
+    height: 400px;
+    width: 400px;
+    border-radius: 50px; 
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+
 }
 .cabeçalho{
+
     align-items: center;
     text-align: center;
     height: 100px;
