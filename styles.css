@@ -18,33 +18,111 @@ height: 400px;
     align-content: center;
     background-color:rgb(19, 4, 128) ;
 }
-.bela{
-    height: 400px;
-    width: 400px;
-    border-radius: 50px;
-    display: block;
-    margin-left: 10px;
-     margin-right: auto;
+/* ========================================
+   CSS SIMPLIFICADO - APENAS EFEITOS MOUSE
+   ======================================== */
 
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.rei_leao{
-    height: 400px;
-    width: 400px;
-    border-radius: 50px;
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
-    transition: tranform 0.5s ease ;
-    box-shadow: 0 8px 25px rgb(rgb(255, 255, 255), rgb(239, 255, 12), rgb(241, 53, 20)) (0, 0, 0, 0.6);
-}
-.aladdin{ 
-    height: 400px;
-    width: 400px;
-    border-radius: 50px; 
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
 
+body {
+    margin: 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    overflow: hidden;
+}
+
+/* ========================================
+   POSICIONAMENTO ESTÁTICO
+   ======================================== */
+.imagem_leao {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.rei_leao {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.bela {
+    position: absolute;
+    right: auto;
+    left: 10px;
+    width: 110px;
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.2));
+    cursor: pointer;
+    transition: all 0.35s ease-out;
+}
+
+.aladdin {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 115px;
+    height: auto;
+    filter: drop-shadow(0 10px 25px rgba(255,215,0,0.4));
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+/* ========================================
+   EFEITOS MOUSEOVER - APROXIMAR
+   ======================================== */
+.rei_leao:hover {
+    transform: scale(1.35);
+    filter: brightness(1.2) drop-shadow(0 0 25px rgba(255,255,255,0.8));
+}
+
+.bela:hover {
+    transform: scale(1.25) rotate(5deg);
+    filter: brightness(1.2) drop-shadow(0 0 25px rgba(255,255,255,0.8));
+}
+
+.aladdin:hover {
+    transform: scale(1.4) rotate(8deg) translateX(-50%) translateY(-15px);
+    filter: brightness(1.2) drop-shadow(0 0 25px rgba(255,215,0,0.8));
+}
+
+/* ========================================
+   EFEITOS MOUSEOUT - VOLTAR (automático)
+   ======================================== */
+.rei_leao:not(:hover),
+.bela:not(:hover),
+.aladdin:not(:hover) {
+    transform: scale(1);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+/* ========================================
+   EFEITOS CLICK
+   ======================================== */
+.rei_leao:active,
+.bela:active,
+.aladdin:active {
+    transform: scale(1.5) !important;
+    transition: transform 0.1s ease !important;
+}
+
+/* ========================================
+   RESPONSIVO
+   ======================================== */
+@media (max-width: 768px) {
+    .rei_leao, .bela, .aladdin {
+        width: 90px !important;
+    }
+    
+    .imagem_leao { top: 15% !important; left: 5% !important; }
+    .bela { top: 45% !important; right: 10% !important; }
 }
 .cabeçalho{
 
@@ -56,5 +134,4 @@ height: 400px;
 .imagem_leao{
 border:2px solid;
 border-color: aliceblue;
-
 }
